@@ -1,15 +1,61 @@
+import HW2.MenuOptions;
+import HW2.Mercedes;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class Main {
+    public static Scanner sc = new Scanner(System.in);
+
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        MenuOptions menuOptions = MenuOptions.z;
+        while (menuOptions != MenuOptions.q)
+            try
+            {
+                menu();
+                menuOptions = MenuOptions.valueOf(sc.nextLine());
+                switch (menuOptions)
+                {
+                    case a:
+                        System.out.println("Car added");
+                        break;
+                    case b:
+                        System.out.println("Car removed");
+                        break;
+                    case c:
+                        System.out.println("Car showed");
+                        break;
+                    case d:
+                        System.out.println("Car sorted");
+                        break;
+                    case q:
+                        System.out.println("Goodbye.");
+                        break;
+                    default:
+                        System.out.println("Selection out of range. Try again");
+                }
+            }
+            catch (IllegalArgumentException e)
+            {
+                System.out.println("Selection out of range. Try again:");
+            }
         int[] arrNumbers = getNumbers(sc);
         sumEvenAndOddNumbers(arrNumbers);
         System.out.println("Enter a count of Fibonacci numbers:  ");
         Fibonacci fibonacci = new Fibonacci();
         fibonacci.printFibonacciNumbers(fibonacci.setN(sc.nextInt()));
         sc.close();
+    }
+
+    public static void menu() {
+        System.out.println("\nEnter:");
+        System.out.println("\ta. Add car");
+        System.out.println("\tb. Remove car");
+        System.out.println("\tc. Show car");
+        System.out.println("\td. Sort car");
+        System.out.println("\tq. Quit Application.");
+        System.out.print("\nSelection -> ");
+
     }
 
     private static void sumEvenAndOddNumbers(int[] arrNumbers) {
