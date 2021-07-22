@@ -41,7 +41,7 @@ public class Main {
             }
         int[] arrNumbers = getNumbers(sc);
         sumEvenAndOddNumbers(arrNumbers);
-        System.out.println("Enter a count of Fibonacci numbers:  ");
+        System.out.println("\nEnter a count of Fibonacci numbers:  ");
         Fibonacci fibonacci = new Fibonacci();
         fibonacci.printFibonacciNumbers(fibonacci.setN(sc.nextInt()));
         sc.close();
@@ -73,7 +73,7 @@ public class Main {
     }
 
     private static int[] getNumbers(Scanner sc) {
-        System.out.println("Please enter first number of interval: ");
+        System.out.println("\nPlease enter first number of interval: ");
         int firstNumber = sc.nextInt();
         System.out.println("Please enter last number of interval: ");
         int lastNumber = sc.nextInt();
