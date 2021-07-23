@@ -1,3 +1,4 @@
+package com.training.hw1;
 
 public class Fibonacci {
     private int n;
@@ -17,7 +18,7 @@ public class Fibonacci {
         int largestOdd = Integer.MIN_VALUE;
         if (n < 1)
             return;
-        System.out.print("Sequence Fibonacci: " + f1 + " ");
+        System.out.print("Sequence HW1.Fibonacci: " + f1 + " ");
         for (int i = 1; i < n; i++) {
             System.out.print(f2 + " ");
             if (f2 % 2 == 0) {
@@ -36,9 +37,9 @@ public class Fibonacci {
             f2 = next;
         }
         System.out.println();
-        System.out.println("Largest even number of sequence Fibonacci: " + largestEven);
-        System.out.println("Largest odd number of sequence Fibonacci: : " + largestOdd);
-        System.out.println("Persentage even of sequence Fibonacci: : " + countEven * 100 / n + "%");
-        System.out.println("Persentage odd of sequence Fibonacci: " + countOdd * 100 / n + "%");
+        System.out.println("Largest even number of sequence HW1.Fibonacci: " + largestEven);
+        System.out.println("Largest odd number of sequence HW1.Fibonacci: : " + largestOdd);
+        System.out.println("Persentage even of sequence HW1.Fibonacci: : " + countEven * 100 / n + "%");
+        System.out.println("Persentage odd of sequence HW1.Fibonacci: " + countOdd * 100 / n + "%");
     }
 }

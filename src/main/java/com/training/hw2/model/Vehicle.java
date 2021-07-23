@@ -1,4 +1,4 @@
-package HW2;
+package com.training.hw2.model;
 
 public interface Vehicle {
     String getBrand();

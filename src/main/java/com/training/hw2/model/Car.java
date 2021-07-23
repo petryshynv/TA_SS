@@ -1,12 +1,9 @@
-package HW2;
+package com.training.hw2.model;
 
 public class Car implements Vehicle, Alarm {
     private String model;
     private String brand;
     private int year;
-
-
-
 
     public String getModel() {
         return model;
@@ -30,7 +27,7 @@ public class Car implements Vehicle, Alarm {
 
     @Override
     public String getBrand() {
-        return null;
+        return brand;
     }
 
     @Override
@@ -43,4 +40,8 @@ public class Car implements Vehicle, Alarm {
         return 0;
     }
 
+    @Override
+    public String toString() {
+        return "Showed car: " + this.getModel();
+    }
 }
