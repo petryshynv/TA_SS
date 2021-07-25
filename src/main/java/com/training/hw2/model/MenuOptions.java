@@ -1,9 +1,9 @@
 package com.training.hw2.model;
 
 public enum MenuOptions {
-    //    TODO rename constans
+
     z("Continue"), a("add car"), b("remove car"), c("show car"),
-    d("sort car"), q("Quit");
+    d("sort car"), e("show car by model"), q("Quit");
 
     private String meaning;
 
