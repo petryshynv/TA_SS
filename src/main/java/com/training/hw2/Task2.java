@@ -1,6 +1,5 @@
 package com.training.hw2;
 
-
 import com.training.hw2.model.*;
 
 import java.util.*;
@@ -29,6 +28,7 @@ public class Task2 {
                         break;
                     case c:
                         showCar2(cList);
+                        System.out.println("Car showed");
                         break;
                     case d:
                         sortedCar(cList);
@@ -64,7 +64,7 @@ public class Task2 {
         List<Car> found = cList.stream()
                 .filter(u -> u.getBrand().equals(brand))
                 .collect(Collectors.toList());
-             for (Car car : found) {
+        for (Car car : found) {
             System.out.println("\tBrand - " + car.getBrand() + ";" + " Model - " + car.getModel() + ";" + " Year - " + car.getYear() + ";");
         }
     }
@@ -74,18 +74,15 @@ public class Task2 {
         for (Car car : cList) {
             System.out.println("\tBrand - " + car.getBrand() + ";" + " Model - " + car.getModel() + ";" + " Year - " + car.getYear() + ";");
         }
-        System.out.println("Car showed");
     }
 
     private void removeCar() {
         System.out.println("Brand: ");
         String brand = sc.nextLine().toUpperCase(Locale.ROOT);
-        List<Car> found = cList.stream()
-                .filter(u -> u.getBrand().equals(brand))
+        List<Car> targetCar = cList.stream()
+                .filter(car -> car.getBrand().equals(brand))
                 .collect(Collectors.toList());
-        for (Car car : found) {
-
-        }
+        cList.removeAll(targetCar);
     }
 
     private Car inputCar() {
