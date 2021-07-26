@@ -1,18 +1,18 @@
+package com.training.hw1;
+
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class Main {
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        int[] arrNumbers = getNumbers(sc);
-        sumEvenAndOddNumbers(arrNumbers);
-        System.out.println("Enter a count of Fibonacci numbers:  ");
+public class Task1 {
+    public static Scanner sc = new Scanner(System.in);
+    public  void startFibonacci() {
+        System.out.println("\nEnter a count of HW1.Fibonacci numbers:  ");
         Fibonacci fibonacci = new Fibonacci();
         fibonacci.printFibonacciNumbers(fibonacci.setN(sc.nextInt()));
-        sc.close();
     }
 
-    private static void sumEvenAndOddNumbers(int[] arrNumbers) {
+    public  void sumEvenAndOddNumbers() {
+        int[] arrNumbers = getNumbers(sc);
         int sumEven = 0;
         int sumOdd = 0;
         for (int arrNumber : arrNumbers) {
@@ -26,8 +26,8 @@ public class Main {
         System.out.println("Sum of odd numbers: " + sumOdd);
     }
 
-    private static int[] getNumbers(Scanner sc) {
-        System.out.println("Please enter first number of interval: ");
+    private  int[] getNumbers(Scanner sc) {
+        System.out.println("\nPlease enter first number of interval: ");
         int firstNumber = sc.nextInt();
         System.out.println("Please enter last number of interval: ");
         int lastNumber = sc.nextInt();
@@ -41,4 +41,5 @@ public class Main {
         System.out.println("Interval: " + Arrays.toString(arrNumbers));
         return arrNumbers;
     }
+
 }
